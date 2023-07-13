@@ -17,7 +17,7 @@ const mongoDBpath = "mongodb+srv://Siddique_123:biochem111@cluster0.rpgdhe4.mong
 
 mongoose.connect(mongoDBpath).then(function(){
     app.get("/",function(req,resp){
-       const response = {message: "API Works!"};
+       const response = {statuscode: resp.statusCode,message: "API Works!"};
        resp.json(response);
     });
   
